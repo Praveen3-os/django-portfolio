@@ -1,0 +1,528 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="Praveen A — Command Center & Engineering Portfolio. Mechatronics, IoT, Robotics, and Integrated AI Assistant for FAQs and Error Codes.">
+  <title>HTTP Error Codes Registry | Praveen A // Command Center</title>
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="static/css/chat_widget.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+</head>
+<body class="theme-dark">
+  <!-- HUD Top Bar / Telemetry Strip -->
+  <aside class="hud-strip" aria-label="System Telemetry Strip">
+    <div class="container hud-inner">
+      <div class="hud-left">
+        <span class="hud-pill"><span class="hud-dot green"></span> NODE: ACTIVE // TAMIL NADU, IN</span>
+        <span class="hud-pill"><span class="hud-dot cyan"></span> PROTOSEM: FELLOWSHIP VERIFIED</span>
+      </div>
+      <div class="hud-right">
+        <span class="hud-pill"><span class="hud-dot purple"></span> SQL: 15 FAQs &bull; 8 ERR CODES</span>
+        <span class="hud-pill"><span class="hud-dot yellow"></span> SYS CLOCK: <strong id="hud-clock">00:00:00</strong></span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Site Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Praveen A Homepage">
+        <span class="logo-mark">⚡</span>
+        <span class="logo-text">PRAVEEN<span class="logo-accent">.A</span></span>
+        <span class="logo-tag">CMD // 01</span>
+      </a>
+
+      <!-- Mobile Navigation Toggle -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Primary Navigation -->
+      <nav id="primary-nav" class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link ">
+              <span class="nav-index">01</span>Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link ">
+              <span class="nav-index">02</span>About &amp; Tribute
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="skills.html" class="nav-link ">
+              <span class="nav-index">03</span>Skills &amp; IoT
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="faqs.html" class="nav-link ">
+              <span class="nav-index">04</span>SQL FAQs
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="errors.html" class="nav-link active">
+              <span class="nav-index">05</span>Error Codes
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="health.html" class="nav-link ">
+              <span class="nav-index">06</span>Telemetry
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link ">
+              <span class="nav-index">07</span>Support / Tickets
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Viewport -->
+  <main id="main-content" class="site-main" role="main">
+    
+<div class="page-header">
+  <div class="container">
+    <div class="header-breadcrumbs">
+      <a href="index.html">Home</a> / <span>Error Codes</span>
+    </div>
+    <h1 class="page-title">HTTP ERROR CODE <span class="gradient-text">REGISTRY</span></h1>
+    <p class="page-subtitle">
+      Comprehensive architectural diagnostics for 8 error codes stored in SQL and explained by the AI Assistant
+    </p>
+  </div>
+</div>
+
+<div class="container page-content">
+  <!-- Requirement Callout -->
+  <div class="req-banner">
+    <div class="req-icon">✅</div>
+    <div class="req-text">
+      <strong>Assessment Requirement Satisfied:</strong> A minimum of 8 error codes (400, 401, 403, 404, 429, 500, 503 and one site-specific code: <strong>599 PRAVEEN_CORE_TIMEOUT</strong>), with custom 404 and 500 pages featuring an "Ask the assistant" option.
+    </div>
+  </div>
+
+  <!-- Live Test Buttons for 404 and 500 -->
+  <div class="test-triggers-card">
+    <h3>Test Live Custom Error Pages</h3>
+    <p>Verify that custom error pages render properly and provide the "Ask the assistant" integration:</p>
+    <div class="test-btn-group">
+      <a href="404.html" class="btn btn-outline" style="border-color: #f59e0b; color: #fbbf24;">
+        🔍 Trigger Custom 404 Page (Non-Existent Route)
+      </a>
+      <a href="/test-500/" class="btn btn-outline" style="border-color: #ef4444; color: #f87171;">
+        💥 Trigger Custom 500 Page (Simulated Server Exception)
+      </a>
+    </div>
+  </div>
+
+  <!-- Error Code Cards Grid -->
+  <div class="errors-grid">
+    
+      <div class="error-card " id="err-400">
+        <div class="error-card-header">
+          <span class="error-code-badge client">
+            HTTP 400
+          </span>
+          <span class="error-cat">Client Error</span>
+        </div>
+
+        <h3 class="error-name">Bad Request</h3>
+
+        <div class="error-section">
+          <strong>Description:</strong>
+          <p>The server cannot process the request due to malformed request syntax, invalid parameters, or deceptive routing.</p>
+        </div>
+
+        <div class="error-section">
+          <strong>Potential Cause:</strong>
+          <p>Malformed JSON payload, missing required URL query parameters, or mismatched header data.</p>
+        </div>
+
+        <div class="error-section">
+          <strong>Resolution:</strong>
+          <p>Inspect your request body, verify field types against the API schema, and ensure headers include Content-Type: application/json.</p>
+        </div>
+
+        <div class="error-actions">
+          <button class="btn-ask-faq" onclick="window.openAssistantWithQuery('Explain error 400')">
+            ⚡ Ask Assistant: Explain 400
+          </button>
+        </div>
+      </div>
+    
+      <div class="error-card " id="err-401">
+        <div class="error-card-header">
+          <span class="error-code-badge client">
+            HTTP 401
+          </span>
+          <span class="error-cat">Client Error</span>
+        </div>
+
+        <h3 class="error-name">Unauthorized</h3>
+
+        <div class="error-section">
+          <strong>Description:</strong>
+          <p>Authentication is required and has failed or has not yet been provided.</p>
+        </div>
+
+        <div class="error-section">
+          <strong>Potential Cause:</strong>
+          <p>Missing Authorization header, expired JWT token, or incorrect API credential key.</p>
+        </div>
+
+        <div class="error-section">
+          <strong>Resolution:</strong>
+          <p>Authenticate with valid credentials or include a bearer token in your HTTP request headers.</p>
+        </div>
+
+        <div class="error-actions">
+          <button class="btn-ask-faq" onclick="window.openAssistantWithQuery('Explain error 401')">
+            ⚡ Ask Assistant: Explain 401
+          </button>
+        </div>
+      </div>
+    
+      <div class="error-card " id="err-403">
+        <div class="error-card-header">
+          <span class="error-code-badge client">
+            HTTP 403
+          </span>
+          <span class="error-cat">Client Error</span>
+        </div>
+
+        <h3 class="error-name">Forbidden</h3>
+
+        <div class="error-section">
+          <strong>Description:</strong>
+          <p>The server understood the request but refuses to authorize it even if authenticated.</p>
+        </div>
+
+        <div class="error-section">
+          <strong>Potential Cause:</strong>
+          <p>Insufficient role privileges, restricted administrative path access, or IP blacklisting.</p>
+        </div>
+
+        <div class="error-section">
+          <strong>Resolution:</strong>
+          <p>Request elevated permissions from an administrator or ensure you are accessing endpoints permitted by your user role.</p>
+        </div>
+
+        <div class="error-actions">
+          <button class="btn-ask-faq" onclick="window.openAssistantWithQuery('Explain error 403')">
+            ⚡ Ask Assistant: Explain 403
+          </button>
+        </div>
+      </div>
+    
+      <div class="error-card " id="err-404">
+        <div class="error-card-header">
+          <span class="error-code-badge client">
+            HTTP 404
+          </span>
+          <span class="error-cat">Client Error</span>
+        </div>
+
+        <h3 class="error-name">Not Found</h3>
+
+        <div class="error-section">
+          <strong>Description:</strong>
+          <p>The origin server did not find a current representation for the target resource.</p>
+        </div>
+
+        <div class="error-section">
+          <strong>Potential Cause:</strong>
+          <p>Incorrect URL route, deleted database record ID, or an outdated bookmark link.</p>
+        </div>
+
+        <div class="error-section">
+          <strong>Resolution:</strong>
+          <p>Verify the URL path spelling or navigate back to the Home page using the command menu.</p>
+        </div>
+
+        <div class="error-actions">
+          <button class="btn-ask-faq" onclick="window.openAssistantWithQuery('Explain error 404')">
+            ⚡ Ask Assistant: Explain 404
+          </button>
+        </div>
+      </div>
+    
+      <div class="error-card " id="err-429">
+        <div class="error-card-header">
+          <span class="error-code-badge client">
+            HTTP 429
+          </span>
+          <span class="error-cat">Client Error</span>
+        </div>
+
+        <h3 class="error-name">Too Many Requests</h3>
+
+        <div class="error-section">
+          <strong>Description:</strong>
+          <p>The user has sent too many requests in a given amount of time (Rate Limiting).</p>
+        </div>
+
+        <div class="error-section">
+          <strong>Potential Cause:</strong>
+          <p>Exceeding the API throttling quota or aggressive polling loops.</p>
+        </div>
+
+        <div class="error-section">
+          <strong>Resolution:</strong>
+          <p>Implement exponential backoff retry algorithms and adhere to the Retry-After header interval.</p>
+        </div>
+
+        <div class="error-actions">
+          <button class="btn-ask-faq" onclick="window.openAssistantWithQuery('Explain error 429')">
+            ⚡ Ask Assistant: Explain 429
+          </button>
+        </div>
+      </div>
+    
+      <div class="error-card " id="err-500">
+        <div class="error-card-header">
+          <span class="error-code-badge server">
+            HTTP 500
+          </span>
+          <span class="error-cat">Server Error</span>
+        </div>
+
+        <h3 class="error-name">Internal Server Error</h3>
+
+        <div class="error-section">
+          <strong>Description:</strong>
+          <p>The server encountered an unexpected condition that prevented it from fulfilling the request.</p>
+        </div>
+
+        <div class="error-section">
+          <strong>Potential Cause:</strong>
+          <p>Unhandled runtime exception, database connection failure, or backend null reference.</p>
+        </div>
+
+        <div class="error-section">
+          <strong>Resolution:</strong>
+          <p>Check the server application logs for tracebacks, inspect environment variable configurations, and verify database daemon uptime.</p>
+        </div>
+
+        <div class="error-actions">
+          <button class="btn-ask-faq" onclick="window.openAssistantWithQuery('Explain error 500')">
+            ⚡ Ask Assistant: Explain 500
+          </button>
+        </div>
+      </div>
+    
+      <div class="error-card " id="err-503">
+        <div class="error-card-header">
+          <span class="error-code-badge server">
+            HTTP 503
+          </span>
+          <span class="error-cat">Server Error</span>
+        </div>
+
+        <h3 class="error-name">Service Unavailable</h3>
+
+        <div class="error-section">
+          <strong>Description:</strong>
+          <p>The server is currently unable to handle the request due to temporary overload or scheduled maintenance.</p>
+        </div>
+
+        <div class="error-section">
+          <strong>Potential Cause:</strong>
+          <p>Server resource exhaustion (CPU/RAM), third-party upstream gateway downtime, or container restarts.</p>
+        </div>
+
+        <div class="error-section">
+          <strong>Resolution:</strong>
+          <p>Retry after a brief delay. Verify container health checks and scaling thresholds.</p>
+        </div>
+
+        <div class="error-actions">
+          <button class="btn-ask-faq" onclick="window.openAssistantWithQuery('Explain error 503')">
+            ⚡ Ask Assistant: Explain 503
+          </button>
+        </div>
+      </div>
+    
+      <div class="error-card site-specific-card" id="err-599">
+        <div class="error-card-header">
+          <span class="error-code-badge server">
+            HTTP 599
+          </span>
+          <span class="error-cat">Custom Telemetry Error</span>
+        </div>
+
+        <h3 class="error-name">PRAVEEN_CORE_TIMEOUT (Site-Specific)</h3>
+
+        <div class="error-section">
+          <strong>Description:</strong>
+          <p>Proprietary site-specific code indicating a telemetry watchdog timeout when reading hardware sensor loops or upstream microservices beyond 2000ms threshold.</p>
+        </div>
+
+        <div class="error-section">
+          <strong>Potential Cause:</strong>
+          <p>NodeMCU/ESP8266 telemetry packet dropped, third-party API timeout exceeded, or hardware actuator bus latency.</p>
+        </div>
+
+        <div class="error-section">
+          <strong>Resolution:</strong>
+          <p>The system automatically engages offline cached telemetry mode. If the condition persists, file a support ticket with the AI assistant.</p>
+        </div>
+
+        <div class="error-actions">
+          <button class="btn-ask-faq" onclick="window.openAssistantWithQuery('Explain error 599')">
+            ⚡ Ask Assistant: Explain 599
+          </button>
+        </div>
+      </div>
+    
+  </div>
+</div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-mark-lg">⚡</div>
+          <h3>PRAVEEN A</h3>
+          <p>Mechatronics Engineer &bull; Full-Stack Developer &bull; AI Assistant Architect</p>
+          <div class="footer-pills">
+            <span class="footer-pill">Django 4.2</span>
+            <span class="footer-pill">SQLite + MongoDB</span>
+            <span class="footer-pill">Gemini AI</span>
+            <span class="footer-pill">NodeMCU Telemetry</span>
+          </div>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Command Center</a></li>
+            <li><a href="about.html">About &amp; Tribute</a></li>
+            <li><a href="skills.html">Skills &amp; IoT Tasks</a></li>
+            <li><a href="faqs.html">SQL FAQs (15)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Assessment Hub</h4>
+          <ul>
+            <li><a href="errors.html">Error Registry (8 Codes)</a></li>
+            <li><a href="health.html">Telemetry &amp; Health</a></li>
+            <li><a href="contact.html">File SQL Support Ticket</a></li>
+            <li><a href="404.html" style="color: #ff224e;">&bull; Test Custom 404 Page</a></li>
+            <li><a href="/test-500/" style="color: #ff224e;">&bull; Test Custom 500 Page</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://github.com/Praveen3-os" target="_blank" rel="noopener">GitHub: Praveen3-os</a></li>
+            <li><a href="mailto:praveen.eng@gmail.com">Direct Email</a></li>
+            <li><a href="javascript:void(0)" onclick="window.openAssistantWithQuery('How can I contact Praveen?')">Chat with Assistant</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Praveen A. Engineered with Django, WhiteNoise, SQLite &amp; MongoDB telemetry.</p>
+        <div class="footer-status">
+          <span class="pulse-indicator"></span> ALL SYSTEMS OPERATIONAL // RESPONSIVE MOBILE READY
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- UNIVERSAL AI CHAT WIDGET ON EVERY PAGE -->
+  
+<!-- Floating AI Assistant Trigger & Widget Window -->
+<aside id="chat-widget-root" aria-label="Command Center AI Assistant">
+  <!-- Launcher Button -->
+  <button id="chat-launcher" class="chat-launcher-btn" aria-label="Open AI Assistant" title="Open AI Assistant">
+    <span class="launcher-pulse"></span>
+    <span class="launcher-icon">⚡</span>
+    <span id="chat-badge" class="launcher-badge" style="display: none;">1</span>
+  </button>
+
+  <!-- Chat Drawer / Window -->
+  <div id="chat-panel" class="chat-widget-window" role="dialog" aria-labelledby="chat-widget-heading">
+    <!-- Header -->
+    <div class="chat-widget-header">
+      <div class="chat-widget-title-group">
+        <div class="chat-widget-avatar">⚡</div>
+        <div>
+          <div id="chat-widget-heading" class="chat-widget-title">Command Center AI</div>
+          <div class="chat-widget-subtitle">● ONLINE // SQL RAG + Telemetry</div>
+        </div>
+      </div>
+      <div class="chat-widget-actions">
+        <button id="chat-close" class="chat-widget-btn" aria-label="Close Assistant">✕</button>
+      </div>
+    </div>
+
+    <!-- Quick Chips -->
+    <div class="chat-widget-chips">
+      <button class="chat-chip chip-btn" data-query="Explain 404">Explain 404</button>
+      <button class="chat-chip chip-btn" data-query="Explain 500">Explain 500</button>
+      <button class="chat-chip chip-btn" data-query="Explain 599">Explain 599</button>
+      <button class="chat-chip chip-btn" data-query="Who is Praveen?">About Praveen</button>
+      <button class="chat-chip chip-btn" data-query="Virat Kohli tribute">Virat Tribute</button>
+      <button class="chat-chip chip-btn" data-query="Create support ticket">🎫 New Ticket</button>
+    </div>
+
+    <!-- Messages Container -->
+    <div id="chat-messages" class="chat-widget-messages">
+      <div class="chat-msg-row assistant">
+        <div class="chat-bubble assistant">
+          👋 <strong>Welcome to Praveen's Command Center.</strong><br>
+          I am your integrated AI assistant. I can answer questions from our <strong>SQL FAQ database</strong>, explain <strong>8 HTTP Error Codes</strong> (including custom 599), and automatically issue a <strong>Support Ticket</strong> when needed.<br><br>
+          How can I help you today?
+        </div>
+        <span class="chat-time">SYS</span>
+      </div>
+    </div>
+
+    <!-- Typing Indicator -->
+    <div id="chat-typing" class="chat-typing-indicator" style="display: none;">
+      <span></span><span></span><span></span>
+      <small style="margin-left: 6px; color: #94a3b8; font-size: 0.72rem;">Analyzing telemetry &amp; FAQ knowledge base...</small>
+    </div>
+
+    <!-- Feedback Stars -->
+    <div id="chat-rating" class="chat-rating-bar">
+      <span style="font-size: 0.72rem; color: #64748b;">Rate response:</span>
+      <button class="star-btn" data-rating="1" title="1 star">★</button>
+      <button class="star-btn" data-rating="2" title="2 stars">★</button>
+      <button class="star-btn" data-rating="3" title="3 stars">★</button>
+      <button class="star-btn" data-rating="4" title="4 stars">★</button>
+      <button class="star-btn" data-rating="5" title="5 stars">★</button>
+    </div>
+
+    <!-- Input Form -->
+    <form id="chat-form" class="chat-widget-input-area">
+      <input type="text" id="chat-input" class="widget-input" placeholder="Ask FAQ, error code, or type 'create ticket'..." autocomplete="off" required>
+      <button type="submit" class="widget-send-btn" aria-label="Send Message">➤</button>
+    </form>
+  </div>
+</aside>
+
+<script src="static/js/chat_widget.js"></script>
+
+
+  <!-- Core Scripts -->
+  <script src="static/js/main.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,445 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="Praveen A — Command Center & Engineering Portfolio. Mechatronics, IoT, Robotics, and Integrated AI Assistant for FAQs and Error Codes.">
+  <title>Command Center // Home | Praveen A // Command Center</title>
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="static/css/chat_widget.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+</head>
+<body class="theme-dark">
+  <!-- HUD Top Bar / Telemetry Strip -->
+  <aside class="hud-strip" aria-label="System Telemetry Strip">
+    <div class="container hud-inner">
+      <div class="hud-left">
+        <span class="hud-pill"><span class="hud-dot green"></span> NODE: ACTIVE // TAMIL NADU, IN</span>
+        <span class="hud-pill"><span class="hud-dot cyan"></span> PROTOSEM: FELLOWSHIP VERIFIED</span>
+      </div>
+      <div class="hud-right">
+        <span class="hud-pill"><span class="hud-dot purple"></span> SQL: 15 FAQs &bull; 8 ERR CODES</span>
+        <span class="hud-pill"><span class="hud-dot yellow"></span> SYS CLOCK: <strong id="hud-clock">00:00:00</strong></span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Site Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Praveen A Homepage">
+        <span class="logo-mark">⚡</span>
+        <span class="logo-text">PRAVEEN<span class="logo-accent">.A</span></span>
+        <span class="logo-tag">CMD // 01</span>
+      </a>
+
+      <!-- Mobile Navigation Toggle -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Primary Navigation -->
+      <nav id="primary-nav" class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link active">
+              <span class="nav-index">01</span>Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link ">
+              <span class="nav-index">02</span>About &amp; Tribute
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="skills.html" class="nav-link ">
+              <span class="nav-index">03</span>Skills &amp; IoT
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="faqs.html" class="nav-link ">
+              <span class="nav-index">04</span>SQL FAQs
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="errors.html" class="nav-link ">
+              <span class="nav-index">05</span>Error Codes
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="health.html" class="nav-link ">
+              <span class="nav-index">06</span>Telemetry
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link ">
+              <span class="nav-index">07</span>Support / Tickets
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Viewport -->
+  <main id="main-content" class="site-main" role="main">
+    
+<!-- Hero Command Center -->
+<section class="hero-section">
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge-row">
+        <span class="badge-hud"><span class="badge-dot green"></span> INFJ-T ADVOCATE // MECHATRONICS</span>
+        <span class="badge-hud"><span class="badge-dot red"></span> FINAL ASSESSMENT LIVE</span>
+      </div>
+
+      <h1 class="hero-title">
+        COMMAND CENTER <span class="gradient-text">// PRAVEEN A</span>
+      </h1>
+
+      <p class="hero-tagline">
+        Mechatronics Engineer &bull; Robotics &amp; IoT Specialist &bull; AI Systems Architect.
+      </p>
+
+      <p class="hero-desc">
+        Welcome to the software development deployment terminal. This platform features an integrated AI assistant powered by a retrieval engine over <strong>15 SQL-backed FAQs</strong>, <strong>8 HTTP Error Code diagnostics</strong> (including proprietary code 599), resilient <strong>MongoDB telemetry logging</strong>, and a dedicated photographic tribute to excellence and discipline.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="faqs.html" class="btn btn-primary">
+          <span>Explore SQL FAQs (15)</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <a href="errors.html" class="btn btn-outline">
+          <span>Error Code Registry (8)</span>
+        </a>
+        <button class="btn btn-accent" onclick="window.openAssistantWithQuery('Who is Praveen A?')">
+          <span>⚡ Launch AI Assistant</span>
+        </button>
+      </div>
+
+      <!-- Quick Metrics Ribbon -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-num">15</div>
+          <div class="metric-label">SQL FAQs Indexed</div>
+          <div class="metric-sub">SQLite Relational</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">8</div>
+          <div class="metric-label">Error Codes Mapped</div>
+          <div class="metric-sub">400 to 599 Custom</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">1</div>
+          <div class="metric-label">Support Tickets</div>
+          <div class="metric-sub">Auto-Escalation Engine</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">2.0s</div>
+          <div class="metric-label">API Time Limit</div>
+          <div class="metric-sub">ZenQuotes + Fallback</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Photographic Tribute & Inspiration Showcase -->
+<section class="section tribute-preview-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">ICONIC INSPIRATION &bull; DISCIPLINE &bull; RELENTLESS WORK ETHIC</div>
+      <h2 class="section-title">THE DRIVE FOR EXCELLENCE <span class="gradient-text">// TRIBUTE GALLERY</span></h2>
+      <p class="section-subtitle">
+        In engineering and robotics, technical mastery requires unyielding discipline and resilience under pressure. The same high-performance mindset is captured in this visual tribute to cricket legend Virat Kohli.
+      </p>
+    </div>
+
+    <div class="tribute-gallery-grid">
+      <!-- Card 1 -->
+      <div class="gallery-card">
+        <div class="gallery-img-wrap">
+          <img src="static/images/kohli-hero.jpg" alt="Virat Kohli iconic MCG celebration" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-badge">MCG TRIUMPH</span>
+            <h4>Composure Under Pressure</h4>
+            <p>Masterclass run-chases defining unyielding mental resilience.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="gallery-card">
+        <div class="gallery-img-wrap">
+          <img src="static/images/kohli-hundred.jpg" alt="Virat Kohli century celebration" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-badge">RECORD BREAKER</span>
+            <h4>Milestone Centuries</h4>
+            <p>50 ODI hundreds, surpassing historic benchmarks with consistency.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="gallery-card">
+        <div class="gallery-img-wrap">
+          <img src="static/images/kohli-rcb.jpg" alt="Virat Kohli celebrating with RCB" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-badge">LOYALTY &amp; PASSION</span>
+            <h4>Royal Challengers Bangalore</h4>
+            <p>17+ seasons of fierce commitment to a single franchise.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="gallery-card">
+        <div class="gallery-img-wrap">
+          <img src="static/images/kohli-jersey18.jpg" alt="Virat Kohli jersey 18 salute" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-badge">NO. 18</span>
+            <h4>Salute to the Nation</h4>
+            <p>An inspiring icon recognized by GQ, Madame Tussauds, and Kotla Stand.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="gallery-card">
+        <div class="gallery-img-wrap">
+          <img src="static/images/kohli-victory-emotion.jpg" alt="Virat Kohli emotional World Cup win" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-badge">WORLD CHAMPION</span>
+            <h4>Pure Emotion of Victory</h4>
+            <p>Tears of triumph after lifting the ICC T20 World Cup 2024.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tribute-footer-action">
+      <a href="about.html" class="btn btn-outline">
+        <span>Read Full Biography &amp; Business Profile</span>
+        <span class="btn-arrow">→</span>
+      </a>
+      <button class="btn btn-accent" onclick="window.openAssistantWithQuery('What diet and fitness routine does Virat Kohli follow?')">
+        <span>⚡ Ask Assistant About Kohli's Diet &amp; Fitness</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Core Engineering Pillars Grid -->
+<section class="section pillars-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">MECHATRONICS &bull; SOFTWARE &bull; ROBOTICS</div>
+      <h2 class="section-title">ENGINEERING FOUNDATIONS</h2>
+      <p class="section-subtitle">Disciplines converging across hardware, firmware, and enterprise software architecture.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="pillar-card">
+        <div class="pillar-icon">🤖</div>
+        <h3>Robotics &amp; ROS2</h3>
+        <p>Kinematic path planning, actuator closed-loop PID control, sensor fusion across LiDAR and optical encoders using the Robot Operating System.</p>
+        <a href="skills.html" class="pillar-link">View ROS2 Architectures →</a>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-icon">📡</div>
+        <h3>IoT &amp; Telemetry</h3>
+        <p>Real-time micro-controller telemetry over ESP8266/NodeMCU, DHT environmental sampling, Bluetooth serial loops, and ThingSpeak cloud dashboards.</p>
+        <a href="skills.html" class="pillar-link">Inspect IoT Practical Tasks 1-5 →</a>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-icon">🧠</div>
+        <h3>AI &amp; Full Stack</h3>
+        <p>Production Django web architecture, SQLite relational records, WhiteNoise static delivery, White-box error diagnostics, and automated ticket generation.</p>
+        <a href="faqs.html" class="pillar-link">Browse Knowledge Base FAQs →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Interactive Quick Assistant Demo -->
+<section class="section assistant-banner-section">
+  <div class="container">
+    <div class="assistant-banner-card">
+      <div class="banner-badge">INTEGRATED AI ASSISTANT // LIVE ON EVERY PAGE</div>
+      <h2>Test the AI Assistant Immediately</h2>
+      <p>
+        Click any quick query below to see how our assistant retrieves data from the <strong>SQL FAQ database</strong>, resolves <strong>HTTP Error Codes</strong>, or creates a <strong>Support Ticket</strong> when answers require human review.
+      </p>
+
+      <div class="banner-chips">
+        <button class="chip-btn" onclick="window.openAssistantWithQuery('Who is Praveen A?')">
+          👤 Who is Praveen?
+        </button>
+        <button class="chip-btn" onclick="window.openAssistantWithQuery('Explain error 404')">
+          🔍 Explain Error 404
+        </button>
+        <button class="chip-btn" onclick="window.openAssistantWithQuery('Explain error 500')">
+          💥 Explain Error 500
+        </button>
+        <button class="chip-btn" onclick="window.openAssistantWithQuery('Explain error 599 site-specific code')">
+          ⚠️ Explain 599 Custom Code
+        </button>
+        <button class="chip-btn" onclick="window.openAssistantWithQuery('What was achieved in IoT Task 5?')">
+          📊 IoT Task 5 Telemetry
+        </button>
+        <button class="chip-btn" onclick="window.openAssistantWithQuery('I need human support')">
+          🎫 Auto-Create Support Ticket
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-mark-lg">⚡</div>
+          <h3>PRAVEEN A</h3>
+          <p>Mechatronics Engineer &bull; Full-Stack Developer &bull; AI Assistant Architect</p>
+          <div class="footer-pills">
+            <span class="footer-pill">Django 4.2</span>
+            <span class="footer-pill">SQLite + MongoDB</span>
+            <span class="footer-pill">Gemini AI</span>
+            <span class="footer-pill">NodeMCU Telemetry</span>
+          </div>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Command Center</a></li>
+            <li><a href="about.html">About &amp; Tribute</a></li>
+            <li><a href="skills.html">Skills &amp; IoT Tasks</a></li>
+            <li><a href="faqs.html">SQL FAQs (15)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Assessment Hub</h4>
+          <ul>
+            <li><a href="errors.html">Error Registry (8 Codes)</a></li>
+            <li><a href="health.html">Telemetry &amp; Health</a></li>
+            <li><a href="contact.html">File SQL Support Ticket</a></li>
+            <li><a href="404.html" style="color: #ff224e;">&bull; Test Custom 404 Page</a></li>
+            <li><a href="/test-500/" style="color: #ff224e;">&bull; Test Custom 500 Page</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://github.com/Praveen3-os" target="_blank" rel="noopener">GitHub: Praveen3-os</a></li>
+            <li><a href="mailto:praveen.eng@gmail.com">Direct Email</a></li>
+            <li><a href="javascript:void(0)" onclick="window.openAssistantWithQuery('How can I contact Praveen?')">Chat with Assistant</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Praveen A. Engineered with Django, WhiteNoise, SQLite &amp; MongoDB telemetry.</p>
+        <div class="footer-status">
+          <span class="pulse-indicator"></span> ALL SYSTEMS OPERATIONAL // RESPONSIVE MOBILE READY
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- UNIVERSAL AI CHAT WIDGET ON EVERY PAGE -->
+  
+<!-- Floating AI Assistant Trigger & Widget Window -->
+<aside id="chat-widget-root" aria-label="Command Center AI Assistant">
+  <!-- Launcher Button -->
+  <button id="chat-launcher" class="chat-launcher-btn" aria-label="Open AI Assistant" title="Open AI Assistant">
+    <span class="launcher-pulse"></span>
+    <span class="launcher-icon">⚡</span>
+    <span id="chat-badge" class="launcher-badge" style="display: none;">1</span>
+  </button>
+
+  <!-- Chat Drawer / Window -->
+  <div id="chat-panel" class="chat-widget-window" role="dialog" aria-labelledby="chat-widget-heading">
+    <!-- Header -->
+    <div class="chat-widget-header">
+      <div class="chat-widget-title-group">
+        <div class="chat-widget-avatar">⚡</div>
+        <div>
+          <div id="chat-widget-heading" class="chat-widget-title">Command Center AI</div>
+          <div class="chat-widget-subtitle">● ONLINE // SQL RAG + Telemetry</div>
+        </div>
+      </div>
+      <div class="chat-widget-actions">
+        <button id="chat-close" class="chat-widget-btn" aria-label="Close Assistant">✕</button>
+      </div>
+    </div>
+
+    <!-- Quick Chips -->
+    <div class="chat-widget-chips">
+      <button class="chat-chip chip-btn" data-query="Explain 404">Explain 404</button>
+      <button class="chat-chip chip-btn" data-query="Explain 500">Explain 500</button>
+      <button class="chat-chip chip-btn" data-query="Explain 599">Explain 599</button>
+      <button class="chat-chip chip-btn" data-query="Who is Praveen?">About Praveen</button>
+      <button class="chat-chip chip-btn" data-query="Virat Kohli tribute">Virat Tribute</button>
+      <button class="chat-chip chip-btn" data-query="Create support ticket">🎫 New Ticket</button>
+    </div>
+
+    <!-- Messages Container -->
+    <div id="chat-messages" class="chat-widget-messages">
+      <div class="chat-msg-row assistant">
+        <div class="chat-bubble assistant">
+          👋 <strong>Welcome to Praveen's Command Center.</strong><br>
+          I am your integrated AI assistant. I can answer questions from our <strong>SQL FAQ database</strong>, explain <strong>8 HTTP Error Codes</strong> (including custom 599), and automatically issue a <strong>Support Ticket</strong> when needed.<br><br>
+          How can I help you today?
+        </div>
+        <span class="chat-time">SYS</span>
+      </div>
+    </div>
+
+    <!-- Typing Indicator -->
+    <div id="chat-typing" class="chat-typing-indicator" style="display: none;">
+      <span></span><span></span><span></span>
+      <small style="margin-left: 6px; color: #94a3b8; font-size: 0.72rem;">Analyzing telemetry &amp; FAQ knowledge base...</small>
+    </div>
+
+    <!-- Feedback Stars -->
+    <div id="chat-rating" class="chat-rating-bar">
+      <span style="font-size: 0.72rem; color: #64748b;">Rate response:</span>
+      <button class="star-btn" data-rating="1" title="1 star">★</button>
+      <button class="star-btn" data-rating="2" title="2 stars">★</button>
+      <button class="star-btn" data-rating="3" title="3 stars">★</button>
+      <button class="star-btn" data-rating="4" title="4 stars">★</button>
+      <button class="star-btn" data-rating="5" title="5 stars">★</button>
+    </div>
+
+    <!-- Input Form -->
+    <form id="chat-form" class="chat-widget-input-area">
+      <input type="text" id="chat-input" class="widget-input" placeholder="Ask FAQ, error code, or type 'create ticket'..." autocomplete="off" required>
+      <button type="submit" class="widget-send-btn" aria-label="Send Message">➤</button>
+    </form>
+  </div>
+</aside>
+
+<script src="static/js/chat_widget.js"></script>
+
+
+  <!-- Core Scripts -->
+  <script src="static/js/main.js"></script>
+  
+</body>
+</html>
