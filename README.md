@@ -7,7 +7,7 @@
 
 > **Final Assessment — Software Development**  
 > **Student / Lead Engineer:** Praveen A (Mechatronics Engineering & Full-Stack Development)  
-> **Live Website (HTTPS):** [https://django-portfolio-live.onrender.com](https://django-portfolio-live.onrender.com)  
+> **Live Website Link (HTTPS):** [https://praveen3-os.github.io/django-portfolio/](https://praveen3-os.github.io/django-portfolio/)  
 > **GitHub Repository:** [https://github.com/Praveen3-os/django-portfolio](https://github.com/Praveen3-os/django-portfolio)  
 > **Task Sheet Submission Reference:** [Software_Development Submission Sheet](https://docs.google.com/spreadsheets/d/1gac3qN_sFgbBQR7utv6N-66-C8szNq3-F6L7NQsbx78/edit?usp=sharing)
 
@@ -157,9 +157,9 @@ curl -X POST http://127.0.0.1:8000/api/chat/ \
 
 - **1. Individual Task Title:**  
   `Command Center AI: Enterprise Assistant & Telemetry Platform for Praveen's Mechatronics Portfolio`
-- **2. Live Website Link (HTTPS):**  
-  `https://django-portfolio-live.onrender.com`
-- **3. GitHub Repository Link:**  
+- **2. The Live Website Link (HTTPS):**  
+  `https://praveen3-os.github.io/django-portfolio/`
+- **3. The GitHub Repository Link (including README file):**  
   `https://github.com/Praveen3-os/django-portfolio`
 - **Task Sheet Link:**  
   [https://docs.google.com/spreadsheets/d/1gac3qN_sFgbBQR7utv6N-66-C8szNq3-F6L7NQsbx78/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1gac3qN_sFgbBQR7utv6N-66-C8szNq3-F6L7NQsbx78/edit?usp=sharing)
