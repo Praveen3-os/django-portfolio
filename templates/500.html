@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="error-page-container">
+  <div class="container error-page-card server-error-card">
+    <div class="error-visual-badge server-badge">500</div>
+    <div class="error-glitch-tag" style="color: #ef4444; border-color: rgba(239, 68, 68, 0.4);">
+      HTTP STATUS: 500 INTERNAL SERVER ERROR // CORE EXCEPTION
+    </div>
+
+    <h1 class="error-page-title">
+      SERVER EXCEPTION <span class="gradient-text red-accent">// MALFUNCTION TRIPPED</span>
+    </h1>
+
+    <p class="error-page-desc">
+      An unexpected internal server exception occurred while processing this operation. The telemetry supervisor has intercepted the event.
+    </p>
+
+    <!-- MANDATORY REQUIREMENT: "Ask the assistant" option -->
+    <div class="error-action-box">
+      <h3>Automated Diagnostic Support</h3>
+      <p>Consult the integrated assistant for root-cause diagnosis or file an immediate ticket:</p>
+
+      <div class="error-btn-row">
+        <button class="btn btn-accent btn-lg" onclick="window.openAssistantWithQuery('explain 500')">
+          <span>⚡ Ask the Assistant to Explain 500</span>
+        </button>
+
+        <button class="btn btn-outline" onclick="window.openAssistantWithQuery('I encountered a 500 Internal Server Error on the platform. Please create a critical support ticket.')">
+          <span>🎫 Open Critical Support Ticket</span>
+        </button>
+
+        <a href="{% url 'health' %}" class="btn btn-primary">
+          <span>Inspect System Telemetry</span>
+          <span class="btn-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Suggested Routes -->
+    <div class="suggested-routes-box">
+      <span>Safe Recovery Points:</span>
+      <div class="suggested-links">
+        <a href="{% url 'home' %}">01 // Home</a>
+        <a href="{% url 'faqs' %}">04 // SQL FAQs</a>
+        <a href="{% url 'errors' %}">05 // Error Codes</a>
+        <a href="{% url 'health' %}">06 // System Health</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

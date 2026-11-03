@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    <div class="header-breadcrumbs">
+      <a href="{% url 'home' %}">Home</a> / <span>About &amp; Tribute</span>
+    </div>
+    <h1 class="page-title">PROFILE, FELLOWSHIP &amp; <span class="gradient-text">INSPIRATION</span></h1>
+    <p class="page-subtitle">
+      Mechatronics Engineering discipline &bull; ProtoSem Innovation Fellowship &bull; Photographic Tribute to Peak Performance
+    </p>
+  </div>
+</div>
+
+<div class="container page-content">
+  <!-- Section 1: Praveen A's Engineering Profile -->
+  <section class="content-block">
+    <div class="block-header">
+      <span class="block-badge">ENGINEERING IDENTITY</span>
+      <h2>Praveen A // Mechatronics &amp; Software Developer</h2>
+    </div>
+    <div class="two-col-grid">
+      <div class="col-text">
+        <p>
+          I am a <strong>Mechatronics Engineering student</strong>, full-stack developer, and AI prompt engineer driven by the integration of mechanical systems, firmware control, and modern cloud software.
+        </p>
+        <p>
+          Identified as an <strong>INFJ-T (Advocate)</strong> personality type, I operate through a blend of structured analytical discipline, empathy-driven product thinking, and continuous technical refinement. Whether tuning PID control loops for robotic actuators or designing resilient multi-database web applications with Django and WhiteNoise, I prioritize robust system architecture and clean execution.
+        </p>
+        <div class="stats-pills-row">
+          <span class="stat-pill"><strong>Specialization:</strong> Robotics &amp; Mechatronics</span>
+          <span class="stat-pill"><strong>Stack:</strong> Python (Django), C++, ROS2, JS</span>
+          <span class="stat-pill"><strong>Databases:</strong> SQLite (SQL) + MongoDB</span>
+          <span class="stat-pill"><strong>Focus:</strong> Embedded Telemetry &amp; AI Integration</span>
+        </div>
+      </div>
+      <div class="col-highlight-box">
+        <div class="box-icon">⚡</div>
+        <h3>The ProtoSem Fellowship</h3>
+        <h4>KCT Forge // Technology Business Incubator</h4>
+        <p>
+          Selected for the prestigious <strong>ProtoSem fellowship</strong> at KCT Forge—an immersive environment designed to bridge the gap between academic theory and enterprise hardware-software innovation.
+        </p>
+        <ul class="clean-bullet-list">
+          <li>Rapid physical prototyping and rapid component fabrication.</li>
+          <li>Closed-loop actuator control and industrial sensor calibration.</li>
+          <li>Edge IoT firmware deployment with automated cloud telemetry failovers.</li>
+          <li>Rigorous failure mode and effect analysis (FMEA) across systems.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Photographic Tribute & High Performance Mindset (Virat Kohli) -->
+  <section class="content-block tribute-full-block">
+    <div class="block-header">
+      <span class="block-badge accent-badge">TRIBUTE &amp; INSPIRATION</span>
+      <h2>The Archetype of Discipline // Virat Kohli</h2>
+      <p class="section-lead">
+        In systems engineering, achieving zero-defect execution mirrors the obsessive physical fitness, tactical focus, and mental toughness demonstrated at the highest levels of competitive athletics. This profile documents the career milestones, health discipline, and commercial ventures of one of India's most iconic athletes.
+      </p>
+    </div>
+
+    <!-- 5 Photo Showcase -->
+    <div class="tribute-full-grid">
+      <div class="tribute-tile">
+        <img src="{% static 'images/kohli-hero.jpg' %}" alt="Virat Kohli raising bat at MCG" loading="lazy">
+        <div class="tile-caption">
+          <span class="tile-badge">ICONIC RUN-CHASE</span>
+          <h4>The MCG Miracle (82* vs Pakistan)</h4>
+          <p>Widely regarded as one of the greatest T20 international innings in history under unbearable pressure.</p>
+        </div>
+      </div>
+
+      <div class="tribute-tile">
+        <img src="{% static 'images/kohli-hundred.jpg' %}" alt="Virat Kohli century celebration under lights" loading="lazy">
+        <div class="tile-caption">
+          <span class="tile-badge">RECORD MASTER</span>
+          <h4>50 ODI Hundreds Benchmark</h4>
+          <p>Surpassed Sachin Tendulkar's historic tally to become the all-time leading ODI century maker.</p>
+        </div>
+      </div>
+
+      <div class="tribute-tile">
+        <img src="{% static 'images/kohli-rcb.jpg' %}" alt="Virat Kohli celebrating with RCB" loading="lazy">
+        <div class="tile-caption">
+          <span class="tile-badge">FRANCHISE TITAN</span>
+          <h4>Royal Challengers Bangalore</h4>
+          <p>All-time highest run scorer in IPL history, displaying 17 years of unwavering loyalty to one team.</p>
+        </div>
+      </div>
+
+      <div class="tribute-tile">
+        <img src="{% static 'images/kohli-jersey18.jpg' %}" alt="Virat Kohli No. 18 saluting the crowd" loading="lazy">
+        <div class="tile-caption">
+          <span class="tile-badge">GLOBAL ICON</span>
+          <h4>No. 18 Legacy</h4>
+          <p>Honoured with a permanent stand at Feroz Shah Kotla Stadium and immortalized at Madame Tussauds.</p>
+        </div>
+      </div>
+
+      <div class="tribute-tile">
+        <img src="{% static 'images/kohli-victory-emotion.jpg' %}" alt="Virat Kohli emotional triumph in 2024 World Cup" loading="lazy">
+        <div class="tile-caption">
+          <span class="tile-badge">WORLD CUP CHAMPION</span>
+          <h4>ICC T20 World Cup 2024 Glory</h4>
+          <p>Player of the Match in the Grand Final at Barbados, bowing out of T20Is as a world champion.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Biography & Accolades Breakdown -->
+    <div class="tribute-info-grid">
+      <!-- Card A -->
+      <div class="info-card">
+        <div class="info-icon">🏆</div>
+        <h3>Global Honors &amp; Cultural Impact</h3>
+        <p>
+          In 2012, Kohli was recognized as one of the best-dressed men by <em>GQ</em> magazine, appearing alongside international figures including Barack Obama. In 2018, <strong>National Geographic</strong> produced a feature documentary celebrating his cricket career.
+        </p>
+        <p>
+          On the eve of the 2019 World Cup, <strong>Madame Tussauds</strong> unveiled his lifelike wax statue in London. Later that year, the Delhi &amp; District Cricket Association honoured him with a named stand at the <strong>Feroz Shah Kotla Stadium</strong> (Arun Jaitley Stadium), making him the youngest cricketer in history to receive such recognition. In November 2019, Disney+ Hotstar released <em>Super V</em>, an animated superhero series based on his fictionalized youth.
+        </p>
+      </div>
+
+      <!-- Card B -->
+      <div class="info-card">
+        <div class="info-icon">🥗</div>
+        <h3>Physical Fitness &amp; Vegetarian Diet</h3>
+        <p>
+          In 2018, Kohli disclosed his transition to a <strong>vegetarian diet</strong> to combat a cervical spine condition triggered by elevated uric acid levels that was impacting his finger mobility and batting grip.
+        </p>
+        <p>
+          He has clarified that while he abstains from meat to maintain peak cardiovascular endurance and metabolic recovery, his regimen is not vegan as he continues to consume nutrient-dense dairy products. His intense functional workouts, agility drills, and strict nutritional discipline revolutionized the fitness standards of the entire Indian national cricket team.
+        </p>
+      </div>
+
+      <!-- Card C -->
+      <div class="info-card">
+        <div class="info-icon">💍</div>
+        <h3>Personal Life &amp; Heritage</h3>
+        <p>
+          Kohli's relationship with Bollywood actress <strong>Anushka Sharma</strong> began in 2013 after they met during a commercial shoot for Clear shampoo. Coined "Virushka" by media, the couple married in an intimate ceremony in Florence, Italy on 11 December 2017. They welcomed their daughter Vamika on 11 January 2021 and son Akaay on 15 February 2024.
+        </p>
+        <p>
+          Kohli embraces personal rituals on the field, including donning white shoes, wearing a black wristband, and wearing a sacred <em>kara</em> bangle on his right arm since 2012. He bears tattoos of Lord Shiva, his parents' names, and his Indian ODI and Test cap numbers.
+        </p>
+      </div>
+
+      <!-- Card D -->
+      <div class="info-card">
+        <div class="info-icon">💼</div>
+        <h3>Commercial Investments &amp; Brands</h3>
+        <p>
+          Beyond sports, Kohli has built a diversified business portfolio. He became co-owner of the Indian Super League football club <strong>FC Goa</strong> in 2014, and partnered with Universal Sportsbiz to launch <strong>WROGN</strong>, a men's casual wear label.
+        </p>
+        <p>
+          In 2015, he committed ₹90 crore to establish <strong>Chisel</strong>, a premier chain of fitness centers across India, and invested in the UAE Royals (tennis) and Bengaluru Yodhas (pro wrestling). In 2017, he partnered with Puma to create the athletic lifestyle brand <strong>One8</strong>, followed by luxury hospitality ventures <strong>Nueva</strong> and the <strong>One8 Commune</strong> restaurant bar chain.
+        </p>
+      </div>
+    </div>
+
+    <!-- Quick AI Prompts for Tribute -->
+    <div class="tribute-prompt-bar">
+      <span>⚡ Ask the AI Assistant about this tribute:</span>
+      <button class="chip-btn" onclick="window.openAssistantWithQuery('What honors has Virat Kohli received outside cricket?')">
+        Awards &amp; Kotla Stand
+      </button>
+      <button class="chip-btn" onclick="window.openAssistantWithQuery('What business ventures and brands has Virat Kohli launched?')">
+        Commercial Brands (WROGN, One8)
+      </button>
+      <button class="chip-btn" onclick="window.openAssistantWithQuery('What diet and fitness routine does Virat Kohli follow?')">
+        Vegetarian Diet &amp; Fitness
+      </button>
+    </div>
+  </section>
+</div>
+{% endblock %}

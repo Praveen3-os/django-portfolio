@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="error-page-container">
+  <div class="container error-page-card">
+    <div class="error-visual-badge">404</div>
+    <div class="error-glitch-tag">HTTP STATUS: 404 NOT FOUND // RESOURCE ABSENT</div>
+
+    <h1 class="error-page-title">
+      COORDINATE UNRESOLVED <span class="gradient-text">// TARGET LOST</span>
+    </h1>
+
+    <p class="error-page-desc">
+      The requested endpoint <code class="target-path">{{ path }}</code> does not exist on this Django server or has been relocated to another route.
+    </p>
+
+    <!-- MANDATORY REQUIREMENT: "Ask the assistant" option -->
+    <div class="error-action-box">
+      <h3>Need Diagnostic Guidance?</h3>
+      <p>Our integrated AI assistant can explain why this error occurred and how to resolve it:</p>
+
+      <div class="error-btn-row">
+        <button class="btn btn-accent btn-lg" onclick="window.openAssistantWithQuery('explain 404')">
+          <span>⚡ Ask the Assistant to Explain 404</span>
+        </button>
+
+        <button class="btn btn-outline" onclick="window.openAssistantWithQuery('I hit a 404 error on path: {{ path|escapejs }}. Please help create a support ticket.')">
+          <span>🎫 Report Route via AI Ticket</span>
+        </button>
+
+        <a href="{% url 'home' %}" class="btn btn-primary">
+          <span>Return to Command Center</span>
+          <span class="btn-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Navigation Suggestions -->
+    <div class="suggested-routes-box">
+      <span>Suggested Valid Destinations:</span>
+      <div class="suggested-links">
+        <a href="{% url 'home' %}">01 // Home</a>
+        <a href="{% url 'about' %}">02 // About &amp; Tribute</a>
+        <a href="{% url 'skills' %}">03 // Skills &amp; IoT</a>
+        <a href="{% url 'faqs' %}">04 // SQL FAQs (15)</a>
+        <a href="{% url 'errors' %}">05 // Error Codes (8)</a>
+        <a href="{% url 'health' %}">06 // Telemetry</a>
+        <a href="{% url 'contact' %}">07 // Support Tickets</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

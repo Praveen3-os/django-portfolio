@@ -1,0 +1,20 @@
+# Python / Django
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.sqlite3
+db.sqlite3
+
+# Environment Variables (CONFIDENTIAL - DO NOT COMMIT)
+.env
+.env.local
+
+# Static and media
+*.log
+.DS_Store
+node_modules/
+.vscode/
+.idea/
+staticfiles/
+data/mongo_fallback/*.json

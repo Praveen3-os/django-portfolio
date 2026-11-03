@@ -1,0 +1,73 @@
+{% load static %}
+<!-- Floating AI Assistant Trigger & Widget Window -->
+<aside id="chat-widget-root" aria-label="Command Center AI Assistant">
+  <!-- Launcher Button -->
+  <button id="chat-launcher" class="chat-launcher-btn" aria-label="Open AI Assistant" title="Open AI Assistant">
+    <span class="launcher-pulse"></span>
+    <span class="launcher-icon">⚡</span>
+    <span id="chat-badge" class="launcher-badge" style="display: none;">1</span>
+  </button>
+
+  <!-- Chat Drawer / Window -->
+  <div id="chat-panel" class="chat-widget-window" role="dialog" aria-labelledby="chat-widget-heading">
+    <!-- Header -->
+    <div class="chat-widget-header">
+      <div class="chat-widget-title-group">
+        <div class="chat-widget-avatar">⚡</div>
+        <div>
+          <div id="chat-widget-heading" class="chat-widget-title">Command Center AI</div>
+          <div class="chat-widget-subtitle">● ONLINE // SQL RAG + Telemetry</div>
+        </div>
+      </div>
+      <div class="chat-widget-actions">
+        <button id="chat-close" class="chat-widget-btn" aria-label="Close Assistant">✕</button>
+      </div>
+    </div>
+
+    <!-- Quick Chips -->
+    <div class="chat-widget-chips">
+      <button class="chat-chip chip-btn" data-query="Explain 404">Explain 404</button>
+      <button class="chat-chip chip-btn" data-query="Explain 500">Explain 500</button>
+      <button class="chat-chip chip-btn" data-query="Explain 599">Explain 599</button>
+      <button class="chat-chip chip-btn" data-query="Who is Praveen?">About Praveen</button>
+      <button class="chat-chip chip-btn" data-query="Virat Kohli tribute">Virat Tribute</button>
+      <button class="chat-chip chip-btn" data-query="Create support ticket">🎫 New Ticket</button>
+    </div>
+
+    <!-- Messages Container -->
+    <div id="chat-messages" class="chat-widget-messages">
+      <div class="chat-msg-row assistant">
+        <div class="chat-bubble assistant">
+          👋 <strong>Welcome to Praveen's Command Center.</strong><br>
+          I am your integrated AI assistant. I can answer questions from our <strong>SQL FAQ database</strong>, explain <strong>8 HTTP Error Codes</strong> (including custom 599), and automatically issue a <strong>Support Ticket</strong> when needed.<br><br>
+          How can I help you today?
+        </div>
+        <span class="chat-time">SYS</span>
+      </div>
+    </div>
+
+    <!-- Typing Indicator -->
+    <div id="chat-typing" class="chat-typing-indicator" style="display: none;">
+      <span></span><span></span><span></span>
+      <small style="margin-left: 6px; color: #94a3b8; font-size: 0.72rem;">Analyzing telemetry &amp; FAQ knowledge base...</small>
+    </div>
+
+    <!-- Feedback Stars -->
+    <div id="chat-rating" class="chat-rating-bar">
+      <span style="font-size: 0.72rem; color: #64748b;">Rate response:</span>
+      <button class="star-btn" data-rating="1" title="1 star">★</button>
+      <button class="star-btn" data-rating="2" title="2 stars">★</button>
+      <button class="star-btn" data-rating="3" title="3 stars">★</button>
+      <button class="star-btn" data-rating="4" title="4 stars">★</button>
+      <button class="star-btn" data-rating="5" title="5 stars">★</button>
+    </div>
+
+    <!-- Input Form -->
+    <form id="chat-form" class="chat-widget-input-area">
+      <input type="text" id="chat-input" class="widget-input" placeholder="Ask FAQ, error code, or type 'create ticket'..." autocomplete="off" required>
+      <button type="submit" class="widget-send-btn" aria-label="Send Message">➤</button>
+    </form>
+  </div>
+</aside>
+
+<script src="{% static 'js/chat_widget.js' %}"></script>

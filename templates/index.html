@@ -1,0 +1,218 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Command Center -->
+<section class="hero-section">
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge-row">
+        <span class="badge-hud"><span class="badge-dot green"></span> INFJ-T ADVOCATE // MECHATRONICS</span>
+        <span class="badge-hud"><span class="badge-dot red"></span> FINAL ASSESSMENT LIVE</span>
+      </div>
+
+      <h1 class="hero-title">
+        COMMAND CENTER <span class="gradient-text">// PRAVEEN A</span>
+      </h1>
+
+      <p class="hero-tagline">
+        Mechatronics Engineer &bull; Robotics &amp; IoT Specialist &bull; AI Systems Architect.
+      </p>
+
+      <p class="hero-desc">
+        Welcome to the software development deployment terminal. This platform features an integrated AI assistant powered by a retrieval engine over <strong>15 SQL-backed FAQs</strong>, <strong>8 HTTP Error Code diagnostics</strong> (including proprietary code 599), resilient <strong>MongoDB telemetry logging</strong>, and a dedicated photographic tribute to excellence and discipline.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="{% url 'faqs' %}" class="btn btn-primary">
+          <span>Explore SQL FAQs (15)</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <a href="{% url 'errors' %}" class="btn btn-outline">
+          <span>Error Code Registry (8)</span>
+        </a>
+        <button class="btn btn-accent" onclick="window.openAssistantWithQuery('Who is Praveen A?')">
+          <span>⚡ Launch AI Assistant</span>
+        </button>
+      </div>
+
+      <!-- Quick Metrics Ribbon -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-num">{{ total_faqs }}</div>
+          <div class="metric-label">SQL FAQs Indexed</div>
+          <div class="metric-sub">SQLite Relational</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">{{ total_errors }}</div>
+          <div class="metric-label">Error Codes Mapped</div>
+          <div class="metric-sub">400 to 599 Custom</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">{{ total_tickets }}</div>
+          <div class="metric-label">Support Tickets</div>
+          <div class="metric-sub">Auto-Escalation Engine</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">2.0s</div>
+          <div class="metric-label">API Time Limit</div>
+          <div class="metric-sub">ZenQuotes + Fallback</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Photographic Tribute & Inspiration Showcase -->
+<section class="section tribute-preview-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">ICONIC INSPIRATION &bull; DISCIPLINE &bull; RELENTLESS WORK ETHIC</div>
+      <h2 class="section-title">THE DRIVE FOR EXCELLENCE <span class="gradient-text">// TRIBUTE GALLERY</span></h2>
+      <p class="section-subtitle">
+        In engineering and robotics, technical mastery requires unyielding discipline and resilience under pressure. The same high-performance mindset is captured in this visual tribute to cricket legend Virat Kohli.
+      </p>
+    </div>
+
+    <div class="tribute-gallery-grid">
+      <!-- Card 1 -->
+      <div class="gallery-card">
+        <div class="gallery-img-wrap">
+          <img src="{% static 'images/kohli-hero.jpg' %}" alt="Virat Kohli iconic MCG celebration" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-badge">MCG TRIUMPH</span>
+            <h4>Composure Under Pressure</h4>
+            <p>Masterclass run-chases defining unyielding mental resilience.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="gallery-card">
+        <div class="gallery-img-wrap">
+          <img src="{% static 'images/kohli-hundred.jpg' %}" alt="Virat Kohli century celebration" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-badge">RECORD BREAKER</span>
+            <h4>Milestone Centuries</h4>
+            <p>50 ODI hundreds, surpassing historic benchmarks with consistency.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="gallery-card">
+        <div class="gallery-img-wrap">
+          <img src="{% static 'images/kohli-rcb.jpg' %}" alt="Virat Kohli celebrating with RCB" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-badge">LOYALTY &amp; PASSION</span>
+            <h4>Royal Challengers Bangalore</h4>
+            <p>17+ seasons of fierce commitment to a single franchise.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="gallery-card">
+        <div class="gallery-img-wrap">
+          <img src="{% static 'images/kohli-jersey18.jpg' %}" alt="Virat Kohli jersey 18 salute" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-badge">NO. 18</span>
+            <h4>Salute to the Nation</h4>
+            <p>An inspiring icon recognized by GQ, Madame Tussauds, and Kotla Stand.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="gallery-card">
+        <div class="gallery-img-wrap">
+          <img src="{% static 'images/kohli-victory-emotion.jpg' %}" alt="Virat Kohli emotional World Cup win" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-badge">WORLD CHAMPION</span>
+            <h4>Pure Emotion of Victory</h4>
+            <p>Tears of triumph after lifting the ICC T20 World Cup 2024.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tribute-footer-action">
+      <a href="{% url 'about' %}" class="btn btn-outline">
+        <span>Read Full Biography &amp; Business Profile</span>
+        <span class="btn-arrow">→</span>
+      </a>
+      <button class="btn btn-accent" onclick="window.openAssistantWithQuery('What diet and fitness routine does Virat Kohli follow?')">
+        <span>⚡ Ask Assistant About Kohli's Diet &amp; Fitness</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Core Engineering Pillars Grid -->
+<section class="section pillars-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">MECHATRONICS &bull; SOFTWARE &bull; ROBOTICS</div>
+      <h2 class="section-title">ENGINEERING FOUNDATIONS</h2>
+      <p class="section-subtitle">Disciplines converging across hardware, firmware, and enterprise software architecture.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="pillar-card">
+        <div class="pillar-icon">🤖</div>
+        <h3>Robotics &amp; ROS2</h3>
+        <p>Kinematic path planning, actuator closed-loop PID control, sensor fusion across LiDAR and optical encoders using the Robot Operating System.</p>
+        <a href="{% url 'skills' %}" class="pillar-link">View ROS2 Architectures →</a>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-icon">📡</div>
+        <h3>IoT &amp; Telemetry</h3>
+        <p>Real-time micro-controller telemetry over ESP8266/NodeMCU, DHT environmental sampling, Bluetooth serial loops, and ThingSpeak cloud dashboards.</p>
+        <a href="{% url 'skills' %}" class="pillar-link">Inspect IoT Practical Tasks 1-5 →</a>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-icon">🧠</div>
+        <h3>AI &amp; Full Stack</h3>
+        <p>Production Django web architecture, SQLite relational records, WhiteNoise static delivery, White-box error diagnostics, and automated ticket generation.</p>
+        <a href="{% url 'faqs' %}" class="pillar-link">Browse Knowledge Base FAQs →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Interactive Quick Assistant Demo -->
+<section class="section assistant-banner-section">
+  <div class="container">
+    <div class="assistant-banner-card">
+      <div class="banner-badge">INTEGRATED AI ASSISTANT // LIVE ON EVERY PAGE</div>
+      <h2>Test the AI Assistant Immediately</h2>
+      <p>
+        Click any quick query below to see how our assistant retrieves data from the <strong>SQL FAQ database</strong>, resolves <strong>HTTP Error Codes</strong>, or creates a <strong>Support Ticket</strong> when answers require human review.
+      </p>
+
+      <div class="banner-chips">
+        <button class="chip-btn" onclick="window.openAssistantWithQuery('Who is Praveen A?')">
+          👤 Who is Praveen?
+        </button>
+        <button class="chip-btn" onclick="window.openAssistantWithQuery('Explain error 404')">
+          🔍 Explain Error 404
+        </button>
+        <button class="chip-btn" onclick="window.openAssistantWithQuery('Explain error 500')">
+          💥 Explain Error 500
+        </button>
+        <button class="chip-btn" onclick="window.openAssistantWithQuery('Explain error 599 site-specific code')">
+          ⚠️ Explain 599 Custom Code
+        </button>
+        <button class="chip-btn" onclick="window.openAssistantWithQuery('What was achieved in IoT Task 5?')">
+          📊 IoT Task 5 Telemetry
+        </button>
+        <button class="chip-btn" onclick="window.openAssistantWithQuery('I need human support')">
+          🎫 Auto-Create Support Ticket
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

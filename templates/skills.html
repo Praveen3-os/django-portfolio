@@ -1,0 +1,177 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    <div class="header-breadcrumbs">
+      <a href="{% url 'home' %}">Home</a> / <span>Skills &amp; IoT</span>
+    </div>
+    <h1 class="page-title">ENGINEERING STACK &amp; <span class="gradient-text">IOT LABS</span></h1>
+    <p class="page-subtitle">
+      Hands-on Mechatronics competencies &bull; Microcontroller firmware &bull; Tasks 1 through 5 documentation
+    </p>
+  </div>
+</div>
+
+<div class="container page-content">
+  <!-- Technical Skills Matrix -->
+  <section class="content-block">
+    <div class="block-header">
+      <span class="block-badge">CORE CAPABILITIES</span>
+      <h2>Technical Mastery Grid</h2>
+    </div>
+
+    <div class="grid-3">
+      <div class="skill-group-card">
+        <div class="skill-group-header">
+          <span class="skill-icon">🐍</span>
+          <h3>Software Engineering</h3>
+        </div>
+        <ul class="skill-item-list">
+          <li><strong>Python:</strong> Django 4.2, Flask, NumPy, WhiteNoise</li>
+          <li><strong>JavaScript:</strong> ES6+, Node.js, Express, REST APIs</li>
+          <li><strong>Databases:</strong> SQLite (SQL relational), MongoDB (NoSQL)</li>
+          <li><strong>DevOps:</strong> Git version control, WhiteNoise static pipeline, Docker</li>
+        </ul>
+      </div>
+
+      <div class="skill-group-card">
+        <div class="skill-group-header">
+          <span class="skill-icon">⚙️</span>
+          <h3>Robotics &amp; Control</h3>
+        </div>
+        <ul class="skill-item-list">
+          <li><strong>ROS2:</strong> Nodes, publishers/subscribers, TF2 transforms</li>
+          <li><strong>C / C++:</strong> Embedded firmware, real-time interrupt handlers</li>
+          <li><strong>Actuators:</strong> Stepper motors, servo positioning, PWM drivers</li>
+          <li><strong>PLC:</strong> Ladder logic programming, industrial relay sequencing</li>
+        </ul>
+      </div>
+
+      <div class="skill-group-card">
+        <div class="skill-group-header">
+          <span class="skill-icon">📡</span>
+          <h3>IoT &amp; Telemetry</h3>
+        </div>
+        <ul class="skill-item-list">
+          <li><strong>Microcontrollers:</strong> NodeMCU ESP8266, ESP32, Arduino Uno, STM32</li>
+          <li><strong>Protocols:</strong> MQTT, HTTP/REST, I2C, SPI, UART, Bluetooth Serial</li>
+          <li><strong>Sensors:</strong> DHT11/DHT22, ultrasonic, load cells, IR sensors</li>
+          <li><strong>Cloud Platforms:</strong> ThingSpeak cloud telemetry, custom HTTP logging</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- IoT Practical Sessions (Tasks 1 to 5) -->
+  <section class="content-block">
+    <div class="block-header">
+      <span class="block-badge accent-badge">LAB VERIFICATION</span>
+      <h2>IoT Practical Sessions (Tasks 1 – 5)</h2>
+      <p class="section-lead">
+        Comprehensive hands-on implementation completed during the IoT and Embedded Systems laboratory modules at KCT Forge.
+      </p>
+    </div>
+
+    <div class="iot-tasks-accordion">
+      <!-- Task 1 -->
+      <div class="task-card">
+        <div class="task-card-header">
+          <div class="task-number">TASK 01</div>
+          <div class="task-title-group">
+            <h3>NodeMCU (ESP8266) Firmware Setup &amp; Basic Telemetry</h3>
+            <span class="task-tech-tag">ESP8266 &bull; Arduino IDE &bull; GPIO Pinout</span>
+          </div>
+        </div>
+        <div class="task-body">
+          <p>
+            Established the foundational development environment for the ESP8266 SoC. Configured CP2102/CH340 USB-to-UART bridge drivers, compiled embedded C++ payloads, and verified bidirectional serial communication at 115200 baud. Built GPIO pulse telemetry to confirm pin logic states and onboard LED health.
+          </p>
+          <div class="task-code-preview">
+            <code>pinMode(LED_BUILTIN, OUTPUT); digitalWrite(LED_BUILTIN, LOW); // Active Low telemetry blink</code>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task 2 -->
+      <div class="task-card">
+        <div class="task-card-header">
+          <div class="task-number">TASK 02</div>
+          <div class="task-title-group">
+            <h3>Environmental Sensing &amp; DHT Calibration</h3>
+            <span class="task-tech-tag">DHT11 / DHT22 &bull; Digital Pulse Signaling</span>
+          </div>
+        </div>
+        <div class="task-body">
+          <p>
+            Interfaced digital humidity and temperature sensors via single-wire bus architecture. Implemented checksum validation over 40-bit transmission packets to filter electrical noise spikes. Calibrated real-world room ambient data with continuous rolling average smoothing.
+          </p>
+          <div class="task-code-preview">
+            <code>float h = dht.readHumidity(); float t = dht.readTemperature(); // Checksum verified</code>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task 3 -->
+      <div class="task-card">
+        <div class="task-card-header">
+          <div class="task-number">TASK 03</div>
+          <div class="task-title-group">
+            <h3>Actuator Driving &amp; Optocoupler Relay Isolation</h3>
+            <span class="task-tech-tag">5V Relays &bull; Flyback Diodes &bull; High Load Control</span>
+          </div>
+        </div>
+        <div class="task-body">
+          <p>
+            Addressed the low-voltage limitation of microcontroller logic (3.3V) by introducing optically isolated transistor driver arrays. Controlled 230V AC mock loads safely without inductive back-EMF feedback resetting the microcontroller logic core.
+          </p>
+        </div>
+      </div>
+
+      <!-- Task 4 -->
+      <div class="task-card">
+        <div class="task-card-header">
+          <div class="task-number">TASK 04</div>
+          <div class="task-title-group">
+            <h3>Wireless Bluetooth Serial Telemetry &amp; Mobile Control</h3>
+            <span class="task-tech-tag">HC-05 / ESP32 Bluetooth &bull; RFCOMM &bull; Mobile App</span>
+          </div>
+        </div>
+        <div class="task-body">
+          <p>
+            Deployed a wireless RFCOMM serial channel enabling a paired mobile terminal to transmit byte-level control codes and receive real-time state telemetry. Configured automatic reconnection handshakes and buffer flush routines.
+          </p>
+        </div>
+      </div>
+
+      <!-- Task 5 -->
+      <div class="task-card">
+        <div class="task-card-header">
+          <div class="task-number">TASK 05</div>
+          <div class="task-title-group">
+            <h3>Cloud Telemetry Dashboard &amp; ThingSpeak Integration</h3>
+            <span class="task-tech-tag">HTTP GET / POST &bull; ThingSpeak REST API &bull; Charts</span>
+          </div>
+        </div>
+        <div class="task-body">
+          <p>
+            Connected NodeMCU to local Wi-Fi (WPA2) and implemented periodic HTTP POST requests streaming multi-field sensor telemetry to the <strong>ThingSpeak Cloud IoT platform</strong>. Verified rate-limiting intervals (15-second minimum throttle) and generated real-time historical graphs for temperature and humidity.
+          </p>
+          <div class="task-code-preview">
+            <code>WiFiClient client; String url = "/update?api_key=" + apiKey + "&field1=" + String(t) + "&field2=" + String(h);</code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick trigger for assistant -->
+    <div class="tribute-prompt-bar" style="margin-top: 24px;">
+      <span>⚡ Ask Assistant:</span>
+      <button class="chip-btn" onclick="window.openAssistantWithQuery('What was achieved in IoT Practical Task 1?')">Task 1 NodeMCU</button>
+      <button class="chip-btn" onclick="window.openAssistantWithQuery('How was environmental sensing handled in IoT Task 2?')">Task 2 DHT</button>
+      <button class="chip-btn" onclick="window.openAssistantWithQuery('How was cloud telemetry streaming configured in IoT Task 5?')">Task 5 ThingSpeak</button>
+    </div>
+  </section>
+</div>
+{% endblock %}

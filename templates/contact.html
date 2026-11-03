@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    <div class="header-breadcrumbs">
+      <a href="{% url 'home' %}">Home</a> / <span>Contact &amp; Support</span>
+    </div>
+    <h1 class="page-title">CONTACT &amp; <span class="gradient-text">SUPPORT DISPATCH</span></h1>
+    <p class="page-subtitle">
+      File official SQL support tickets or contact Praveen A for engineering collaboration
+    </p>
+  </div>
+</div>
+
+<div class="container page-content">
+  <!-- Feedback banner if ticket created -->
+  {% if ticket_created %}
+    <div class="req-banner" style="background: rgba(16, 185, 129, 0.15); border-color: #10b981;">
+      <div class="req-icon">🎉</div>
+      <div class="req-text">
+        <strong>Support Ticket Registered:</strong> Ticket code <code>{{ ticket_created }}</code> has been successfully persisted in the SQL database. Status: <strong>Open</strong>. Praveen will review your request.
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="two-col-grid">
+    <!-- Ticket Form -->
+    <div class="contact-form-card">
+      <h3>File an Official Support Ticket (Stored in SQL)</h3>
+      <p style="color: #94a3b8; font-size: 0.88rem; margin-bottom: 20px;">
+        When the AI assistant cannot answer or you have a technical inquiry, file a ticket below. Each ticket is assigned a unique reference code and saved directly in the SQL database.
+      </p>
+
+      <form method="POST" action="{% url 'contact' %}" class="ticket-form">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="user_name">Your Name</label>
+          <input type="text" id="user_name" name="user_name" placeholder="e.g. Jane Doe" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="jane@example.com" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="priority">Priority Level</label>
+          <select id="priority" name="priority" class="form-control">
+            <option value="Low">Low — General inquiry</option>
+            <option value="Normal" selected>Normal — Question regarding portfolio / IoT</option>
+            <option value="High">High — Technical evaluation</option>
+            <option value="Critical">Critical — Service degradation</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Ticket Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Summary of question or issue" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Detailed Description</label>
+          <textarea id="description" name="description" rows="4" placeholder="Provide full technical details or questions..." class="form-control" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          <span>Submit Support Ticket to SQL</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </form>
+    </div>
+
+    <!-- Contact Info & Live SQL Tickets List -->
+    <div class="contact-sidebar">
+      <div class="info-card" style="margin-bottom: 24px;">
+        <div class="info-icon">📬</div>
+        <h3>Direct Channels</h3>
+        <ul class="clean-bullet-list">
+          <li><strong>Lead Engineer:</strong> Praveen A</li>
+          <li><strong>Academic Institution:</strong> KCT Forge // ProtoSem</li>
+          <li><strong>GitHub:</strong> <a href="https://github.com/Praveen3-os" target="_blank" rel="noopener">Praveen3-os</a></li>
+          <li><strong>Location:</strong> Coimbatore, Tamil Nadu, India</li>
+        </ul>
+      </div>
+
+      <div class="recent-tickets-box">
+        <h3>Recent SQL Support Tickets</h3>
+        <p style="color: #64748b; font-size: 0.78rem;">Live query of <code>core_supportticket</code> table</p>
+
+        <div class="tickets-list">
+          {% for ticket in recent_tickets %}
+            <div class="ticket-mini-card">
+              <div class="ticket-mini-header">
+                <code class="ticket-tag">{{ ticket.ticket_code }}</code>
+                <span class="badge-cat">{{ ticket.status }}</span>
+              </div>
+              <div class="ticket-mini-subj">{{ ticket.subject }}</div>
+              <div class="ticket-mini-meta">
+                {{ ticket.user_name }} &bull; {{ ticket.created_at|date:"M d, H:i" }} &bull; {{ ticket.priority }}
+              </div>
+            </div>
+          {% empty %}
+            <p style="color: #94a3b8; font-size: 0.85rem;">No support tickets filed yet.</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

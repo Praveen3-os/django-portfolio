@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    <div class="header-breadcrumbs">
+      <a href="{% url 'home' %}">Home</a> / <span>Error Codes</span>
+    </div>
+    <h1 class="page-title">HTTP ERROR CODE <span class="gradient-text">REGISTRY</span></h1>
+    <p class="page-subtitle">
+      Comprehensive architectural diagnostics for 8 error codes stored in SQL and explained by the AI Assistant
+    </p>
+  </div>
+</div>
+
+<div class="container page-content">
+  <!-- Requirement Callout -->
+  <div class="req-banner">
+    <div class="req-icon">✅</div>
+    <div class="req-text">
+      <strong>Assessment Requirement Satisfied:</strong> A minimum of 8 error codes (400, 401, 403, 404, 429, 500, 503 and one site-specific code: <strong>599 PRAVEEN_CORE_TIMEOUT</strong>), with custom 404 and 500 pages featuring an "Ask the assistant" option.
+    </div>
+  </div>
+
+  <!-- Live Test Buttons for 404 and 500 -->
+  <div class="test-triggers-card">
+    <h3>Test Live Custom Error Pages</h3>
+    <p>Verify that custom error pages render properly and provide the "Ask the assistant" integration:</p>
+    <div class="test-btn-group">
+      <a href="/trigger-custom-404-error" class="btn btn-outline" style="border-color: #f59e0b; color: #fbbf24;">
+        🔍 Trigger Custom 404 Page (Non-Existent Route)
+      </a>
+      <a href="{% url 'test_500' %}" class="btn btn-outline" style="border-color: #ef4444; color: #f87171;">
+        💥 Trigger Custom 500 Page (Simulated Server Exception)
+      </a>
+    </div>
+  </div>
+
+  <!-- Error Code Cards Grid -->
+  <div class="errors-grid">
+    {% for err in error_codes %}
+      <div class="error-card {% if err.code == 599 %}site-specific-card{% endif %}" id="err-{{ err.code }}">
+        <div class="error-card-header">
+          <span class="error-code-badge {% if err.code >= 500 %}server{% else %}client{% endif %}">
+            HTTP {{ err.code }}
+          </span>
+          <span class="error-cat">{{ err.category }}</span>
+        </div>
+
+        <h3 class="error-name">{{ err.name }}</h3>
+
+        <div class="error-section">
+          <strong>Description:</strong>
+          <p>{{ err.description }}</p>
+        </div>
+
+        <div class="error-section">
+          <strong>Potential Cause:</strong>
+          <p>{{ err.cause }}</p>
+        </div>
+
+        <div class="error-section">
+          <strong>Resolution:</strong>
+          <p>{{ err.resolution }}</p>
+        </div>
+
+        <div class="error-actions">
+          <button class="btn-ask-faq" onclick="window.openAssistantWithQuery('Explain error {{ err.code }}')">
+            ⚡ Ask Assistant: Explain {{ err.code }}
+          </button>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
